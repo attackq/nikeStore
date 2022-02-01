@@ -122,7 +122,7 @@ currentProductSizes.forEach((size,index) => {
 
 const productBtn = document.querySelector('.productBtn');
 const closeBtn = document.querySelector('.close');
-const paymentModal = document.querySelector('.payment');
+const paymentModal = document.querySelector('.modalPay');
 const product = document.querySelector('.product');
 
 productBtn.addEventListener('click', () => {
@@ -132,6 +132,12 @@ productBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     paymentModal.style.display = 'none';
 });
+paymentModal.addEventListener('click', (e) => {
+  if (e.target === paymentModal) {
+    paymentModal.style.display = 'none';
+  }
+});
+
 
 
 //
